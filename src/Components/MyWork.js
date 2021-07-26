@@ -1,12 +1,14 @@
-import { makeStyles } from '@material-ui/core';
-import React from 'react'
+import { makeStyles, Typography } from '@material-ui/core';
+
 
 const MyWork = ({id,title}) => {
     const classes = useStyles();
     return (
-        <div className= {classes.section}>
-           My work 
-        </div>
+        <div className = {classes.sectionContent} id = {id}>
+               <Typography variant = "h3">
+                   {title}
+               </Typography>
+           </div>
     )
 }
 const useStyles = makeStyles((theme) => ({
