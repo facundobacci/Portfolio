@@ -11,10 +11,10 @@ function App() {
   return (
     <div className={classes.root}>
       <Navbar/>
-      <About title = "About me" id = "about"/>
-      <Skills title = "My coding journey" id= "skills"/>
-      <MyWork title = "My work" id= "mywork"/>
-      <Contact title = "Get in touch" id= "contact"/>
+      <About title = "Sobre mi" id = "about"/>
+      <Skills title = "Habilidades" id= "skills"/>
+      <MyWork title = "Mi experiencia" id= "mywork"/>
+      <Contact title = "Contacto" id= "contact"/>
     </div>
   );
 }

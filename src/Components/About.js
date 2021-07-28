@@ -1,5 +1,9 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { Card, CardContent, CardMedia, CardActions, Divider } from '@material-ui/core';
+import { makeStyles, Typography, Button } from '@material-ui/core';
 import React from 'react'
+import foto from '../Images/Facu.jpg'
+import TypeWriterEffect from 'react-typewriter-effect';
+import cv from '../Images/CV-FACUNDO BACCI.pdf'
 
 const About = ({id,title}) => {
     const classes = useStyles();
@@ -9,6 +13,37 @@ const About = ({id,title}) => {
                <Typography variant = "h3">
                    {title}
                </Typography>
+               <Card className= {classes.card}>
+                   <CardMedia image= {foto} className = {classes.media} title="picture"/>
+                   <CardContent className={classes.cardcontent}>
+                       <TypeWriterEffect
+                        text= "Hola! Mi nombre es Facundo Bacci"
+                        textStyle={{fontSize: "1.5rem", fontWeight:"700px",color:"black"}}
+                        startDelay= {100}
+                        cursorColor = "black"
+                        typeSpeed= {100}
+                        />
+                        <Divider/>
+                       <TypeWriterEffect
+                        text= "Soy desarrollador de software"
+                        textStyle={{fontSize: "1.2rem", fontWeight:"500px",color:"black"}}
+                        startDelay= {3000}
+                        cursorColor = "black"
+                        typeSpeed= {100}
+                        />
+                       <Typography variant="h6" color= "textSecondary">
+                            - Estudio en la Universidad Nacional de La Plata, Buenos Aires
+                       </Typography>
+                       <Typography variant="h6" color= "textSecondary">
+                            - Me apasionan las tecnologias y el mundo de la informatica
+                       </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button variant="contained"className={classes.pdf}>
+                        <a href={cv}download> Descarga mi CV   </a>              
+                        </Button>
+                    </CardActions>
+               </Card>
            </div>
                     
         </div>
@@ -21,10 +56,66 @@ const useStyles = makeStyles((theme) => ({
       minHeight: "100vh",
       
     },
-    sectionContent: {
-        maxWidth: "80vh",
+    sectionContent:{
+        maxWidth: "60vw",
         margin: "0 auto",
+        marginTop: 20,
+        "& h3":{
+            color: "black",
+            fontSize: "3rem",
+            fontWeight: "bold",
+            
+        }
+    },   
+    media:{
+        width: "300px",
+        height: "auto",
+        objectFit: "cover",
+        borderRadius: "10px",
+        margin: theme.spacing(3)
+    },
+    card:{
+        height:"70vh",
+        display: "flex",
+        marginTop: theme.spacing(4),
+        position: "relative",
+        
+    },
+    pdf:{
+        position: "absolute",
+        bottom: "2.5rem",
+        right: "3rem",
+        [theme.breakpoints.down("sm")]:{
+
+            bottom: "2.5rem",
+            right:"0.5rem",
+        },
+        backgroundColor: "#25DFE8",
+        padding: theme.spacing(3),
+        "&:hover":{
+            backgroundColor: "slateBlue",
+        },
+        "& a ":{
+            color: "#fff",
+            textDecoration: "none",
+            fontWeight: 600,
+        },
+    },
+    cardcontent:{
+        marginTop: theme.spacing(2),
+        "& h6":{
+            marginTop: theme.spacing(3),
+            color: "black",
+            fontSize: "1.4rem",
+            fontWeight: "bold",
+            [theme.breakpoints.down("sm")]:{
+                display: "none",
+            },
+            
+        },
+        
     }
+    
 
     
     }))
