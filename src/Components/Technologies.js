@@ -7,8 +7,7 @@ import react from '../Images/React.png'
 import sql from '../Images/sql.png'
 import { Timeline, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineSeparator, } from '@material-ui/lab'
 import TimeLineItem from '@material-ui/lab/TimelineItem'
-import { makeStyles, Paper, Typography } from '@material-ui/core'
-import { classes } from 'istanbul-lib-coverage'
+import { Card, CardContent, makeStyles, Paper, Typography, Tooltip } from '@material-ui/core'
 import StarRating from './StarRating'
     const Technologies = () => {
 
@@ -16,77 +15,144 @@ import StarRating from './StarRating'
         {
             year:"2020",
             src:c,
-            title: ".net"
+            title: "C# / .Net",
+            stars: 3,
 
         },
         {
             year:"2020",
             src:html,
-            title: "Html"
-
+            title: "Html",
+            stars: 3,
         },
         {
             year:"2020",
             src:css,
-            title: "Css"
-
+            title: "Css",
+            stars: 3,
         },
         {
             year:"2021",
             src:js,
-            title: "JavaScript"
-
+            title: "JavaScript",
+            stars: 3,
         },
         {
             year:"2021",
             src:react,
-            title: "React"
-
+            title: "React",
+            stars: 3,
         },
         {
             year:"2021",
             src:sql,
-            title: "Sql"
-
+            title: "Sql",
+            stars: 3,
         },
 
 
     ]
     const classes = useStyles();
     return (
-        <Timeline align="left">
-            {
-                skills.map(({year,src,title,stars},index)=>(
-                    <TimeLineItem key = {index}>
-                        <TimelineOppositeContent>
-                            <Typography variant= "h6" color= "textSecondary">
-                                {year}
-                            </Typography>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
+        <Card className = {classes.card}> 
+        <CardContent className = {classes.cardcontent}>
+            <Timeline align="left">
+                {
+                    skills.map(({year,src,title,stars},index)=>(
+                     <TimeLineItem key = {index}>
+                         <TimelineOppositeContent>
+                             <Typography variant= "h6" color= "textSecondary">
+                                 {year}
+                             </Typography>
+                          </TimelineOppositeContent>
+                           <TimelineSeparator className={classes.images}>
                            
-                            <img src={src} alt= {title}className={classes.customlogo}/>
+                                <img src={src} alt= {title}className={classes.customlogo}/>
                            
-                        <TimelineConnector/> 
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <Paper elevation ={5} className = {classes.paper}>
-                                <Typography variant ="h6" component= "h1">
-                                {title}
-                                </Typography>
-                                <StarRating stars={stars}/>   
-                            </Paper>
-                        </TimelineContent>
-                    </TimeLineItem>
+                          <TimelineConnector/> 
+                          </TimelineSeparator>
+
+                          <TimelineSeparator className={classes.tooltip}>
+                                <Tooltip title={title}>
+                                    <img src={src} alt= {title}className={classes.customlogo}/>
+                                </Tooltip>
+                          <TimelineConnector/> 
+                          </TimelineSeparator>
+                          <TimelineContent>
+                              <Paper elevation ={5} className = {classes.paper}>
+                                  <Typography variant ="h5" component= "h1">
+                                   {title}
+                                   </Typography>
+                                   <StarRating stars={stars}/>   
+                             </Paper>
+                          </TimelineContent>
+                     </TimeLineItem>
                 ))
             }
-        </Timeline>
+            </Timeline>
+            </CardContent>
+        </Card>
     )
 }
 
 const useStyles = makeStyles((theme) => ({
     customlogo:{
             width:"40px"
+    },
+    card:{
+        width: "70vh",
+        height:"70vh",
+        display: "flex",
+        margin:"auto",
+        marginTop: theme.spacing(4),
+        position: "relative",
+        [theme.breakpoints.down("sm")]:{
+
+            height:"60vh",
+            width:"auto"
+        },
+        
+    },
+    cardcontent:{
+        marginTop: theme.spacing(2),
+        margin: "auto",
+        "& h6":{
+            marginTop: theme.spacing(0.5),
+            color: "black",
+            fontSize: "1rem",
+            fontWeight: "bold",
+            
+
+            
+            
+        },
+        
+    },
+    paper: {
+        padding:"6px 16px",
+        maxWidth:"200px",
+        [theme.breakpoints.down("sm")]:{
+
+            display:"none"
+        },
+        
+    },
+    images:{
+        display:"flex",
+        [theme.breakpoints.down("sm")]:{
+
+            display:"none"
+        },
+    },
+    tooltip:{
+        display:"none",
+        [theme.breakpoints.down("sm")]:{
+
+            display:"flex",
+            "&:hover":{
+                cursor:'pointer',
+            },
+        },
     }
     
     }))

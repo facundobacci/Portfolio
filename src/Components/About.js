@@ -10,7 +10,7 @@ const About = ({id,title}) => {
     return (
         <div className= {classes.section}>
            <div className = {classes.sectionContent} id = {id}>
-               <Typography variant = "h3">
+               <Typography variant = "h3" align="center">
                    {title}
                </Typography>
                <Card className= {classes.card}>
@@ -65,14 +65,25 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "3rem",
             fontWeight: "bold",
             
-        }
+        },
+        "& h3:hover":{
+            cursor: "pointer",
+            color: "slateBlue",
+            textDecoration: "none",
+        },
     },   
     media:{
         width: "300px",
         height: "auto",
         objectFit: "cover",
         borderRadius: "10px",
-        margin: theme.spacing(3)
+        margin: theme.spacing(3),
+
+        [theme.breakpoints.down("sm")]:{
+
+            display: "none",
+        },
+        
     },
     card:{
         height:"70vh",
@@ -87,8 +98,8 @@ const useStyles = makeStyles((theme) => ({
         right: "3rem",
         [theme.breakpoints.down("sm")]:{
 
-            bottom: "2.5rem",
-            right:"0.5rem",
+            bottom: "2rem",
+            right:"1.5rem",
         },
         backgroundColor: "#25DFE8",
         padding: theme.spacing(3),

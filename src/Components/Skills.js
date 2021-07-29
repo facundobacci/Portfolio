@@ -7,9 +7,9 @@ const Skills = ({id,title}) => {
     return (
         <div className= {classes.section}>
             <div className = {classes.sectionContent} id = {id}>
-               <Typography variant = "h3">
+               <Typography variant = "h3" align="center">
                    {title}
-               </Typography>
+               </Typography>            
                <Technologies/>
            </div>
         </div>
@@ -18,7 +18,7 @@ const Skills = ({id,title}) => {
 const useStyles = makeStyles((theme) => ({
     section:{
       minHeight: "100vh",
-      
+      margin:"auto",
     },
     sectionContent:{
         maxWidth: "60vw",
@@ -26,9 +26,14 @@ const useStyles = makeStyles((theme) => ({
         "& h3":{
             color: "black",
             fontSize: "3rem",
-            fontWeight: "bold",
+            fontWeight: "bold",         
             
-        }
+        },
+        "& h3:hover":{
+            cursor: "pointer",
+            color: "slateBlue",
+            textDecoration: "none",
+        },
     }
     
     

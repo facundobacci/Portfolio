@@ -20,9 +20,11 @@ function App() {
 }
 
 const useStyles = makeStyles((theme) => ({
-root:{background:'linear-gradient(to right bottom, #a6ffff, #8ea8b9)'
+root:{
+  background:'linear-gradient(to right bottom, #a6ffff, #8ea8b9)'
   
-}
+},
+
 
 }))
 

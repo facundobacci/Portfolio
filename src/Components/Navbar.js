@@ -41,12 +41,19 @@ const Navbar = () => {
         }
     ]
 
+    const scrollToTop = () => {
+            scroll.scrollToTop()
+    }
 
     return (
         <>
         <AppBar position = "sticky" className = {classes.root2}>
            <Toolbar className = {classes.toolbar}>
-                <img src= {logo} className = {classes.logo} alt = "Logo"/>
+                <img src= {logo}
+                 className = {classes.logo}
+                  alt = "Logo"
+                  onClick={scrollToTop}
+                  />
                 <List className = {classes.menu}>
                     {
                         links.map(({id,text},index)=>(
