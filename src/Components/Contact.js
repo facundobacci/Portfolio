@@ -12,7 +12,7 @@ const Contact = ({id,title}) => {
                     <Card style={{maxWidth:"450",margin: "0 auto", padding:"20px 5 px",marginTop:"2.5rem"}}>
                         <CardContent>
                         
-                            <form onSubmit> 
+                            <form>
                             <Grid container spacing={1}>
                                 <Grid xs={12}sm={6} item >
                                     <TextField label= "Nombre" placeholder= "ingresa tu nombre " variant="outlined" fullWidth required />
