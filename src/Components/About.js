@@ -31,11 +31,17 @@ const About = ({id,title}) => {
                         cursorColor = "black"
                         typeSpeed= {100}
                         />
+                        <Typography variant="h6" color= "textSecondary">
+                            - Naci en La Plata, Buenos Aires
+                       </Typography>
                        <Typography variant="h6" color= "textSecondary">
-                            - Estudio en la Universidad Nacional de La Plata, Buenos Aires
+                            - Estudio en la Universidad Nacional de La Plata desde el 2018
                        </Typography>
                        <Typography variant="h6" color= "textSecondary">
                             - Me apasionan las tecnologias y el mundo de la informatica
+                       </Typography>
+                       <Typography variant="h6" color= "textSecondary">
+                            - Me considero con una gran capacidad de aprendizaje ante desafios nuevos para seguir formandome como profesional
                        </Typography>
                     </CardContent>
                     <CardActions>
@@ -57,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
       
     },
     sectionContent:{
-        maxWidth: "60vw",
+        maxWidth: "90vw",
         margin: "0 auto",
         marginTop: 20,
         "& h3":{
@@ -79,10 +85,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "10px",
         margin: theme.spacing(3),
 
-        [theme.breakpoints.down("sm")]:{
-
-            display: "none",
-        },
+        
         
     },
     card:{
@@ -99,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]:{
 
             bottom: "2rem",
-            right:"1.5rem",
+            right:"1rem",
         },
         backgroundColor: "#25DFE8",
         padding: theme.spacing(3),

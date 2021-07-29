@@ -17,7 +17,6 @@ const MyWork = ({id,title}) => {
                                    <CardMedia className={classes.caratula} image= {image} titulo= "caratula"/>
                                    <CardContent className={classes.contenido}>
                                       <Link href={link} color="primary" target="_blank" rel="noopener noreferrer">
-                                        <Divider/>
                                           {title}
                                       </Link>
                                    </CardContent>
@@ -57,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth:345,
         minHeight:275,
         margin: theme.spacing(3),
+        
     },
     caratula:{    
             heigth: 0,

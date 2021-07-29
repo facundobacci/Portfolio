@@ -1,34 +1,15 @@
-import logo from "./Images/logo.jfif";
+import git from "./Images/github.png";
+import portfolio from "./Images/logo.jfif";
 
 const mockData = [
     {
-        title: "Portfolio Personal",
-        image: logo,
-        link: "https://www.instagram.com/facubacci/",
+        title: "Mi github",
+        image: git,
+        link: "https://github.com/facundobacci",
     },
     {
         title: "Portfolio Personal",
-        image: logo,
-        link: "https://www.instagram.com/facubacci/",
-    },
-    {
-        title: "Portfolio Personal",
-        image: logo,
-        link: "https://www.instagram.com/facubacci/",
-    },
-    {
-        title: "Portfolio Personal",
-        image: logo,
-        link: "https://www.instagram.com/facubacci/",
-    },
-    {
-        title: "Portfolio Personal",
-        image: logo,
-        link: "https://www.instagram.com/facubacci/",
-    },
-    {
-        title: "Portfolio Personal",
-        image: logo,
+        image: portfolio,
         link: "https://www.instagram.com/facubacci/",
     },
 

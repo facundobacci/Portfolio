@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
       <About title = "Sobre mi" id = "about"/>
       <Skills title = "Habilidades" id= "skills"/>
-      <MyWork title = "Mi experiencia" id= "mywork"/>
+      <MyWork title = "Mis trabajos" id= "mywork"/>
       <Contact title = "Contacto" id= "contact"/>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, makeStyles, Paper, TextField, Typography } from '@material-ui/core';
+import { Card, CardContent, Grid, makeStyles,  TextField, Typography } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 
 const Contact = ({id,title}) => {
@@ -30,7 +30,7 @@ const Contact = ({id,title}) => {
                                     <TextField label= "Mensaje" multiline rows={4} placeholder= "Escribe tu mensaje" variant="outlined" fullWidth required/>
                                 </Grid>
                                 <Grid xs={12} item >
-                                <Button variant="contained" className={classes.pdf}>  
+                                <Button type="submit" variant="contained" className={classes.pdf}>  
                                     Enviar
                                 </Button>  
                                 </Grid>
