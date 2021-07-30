@@ -10,7 +10,7 @@ const mockData = [
     {
         title: "Portfolio Personal",
         image: portfolio,
-        link: "https://www.instagram.com/facubacci/",
+        link: "https://facundo-bacci-portfolio.netlify.app/",
     },
 
 ];
