@@ -120,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
         position: "relative",
         [theme.breakpoints.down("sm")]:{
 
-            height:"60vh",
+            height:"86vh",
             width:"auto"
         },
         
