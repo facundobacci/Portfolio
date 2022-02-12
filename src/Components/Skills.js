@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "& h3:hover":{
             cursor: "pointer",
-            color: "slateBlue",
+            color: "black",
             textDecoration: "none",
         },
     }

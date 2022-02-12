@@ -2,7 +2,9 @@ import React from 'react'
 import c from '../Images/net.png'
 import html from '../Images/descarga.png'
 import css from '../Images/CSS.png'
-import js from '../Images/javascript.png'
+import python from '../Images/Python.png'
+import git from '../Images/Git.png'
+import java from '../Images/Java.png'
 import react from '../Images/React.png'
 import sql from '../Images/sql.png'
 import { Timeline, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineSeparator, } from '@material-ui/lab'
@@ -16,7 +18,7 @@ import StarRating from './StarRating'
             year:"2020",
             src:c,
             title: "C# / .Net",
-            stars: 3,
+            stars: 4,
 
         },
         {
@@ -33,24 +35,34 @@ import StarRating from './StarRating'
         },
         {
             year:"2021",
-            src:js,
-            title: "JavaScript",
-            stars: 3,
-        },
-        {
-            year:"2021",
             src:react,
             title: "React",
-            stars: 3,
+            stars: 2,
         },
         {
             year:"2021",
             src:sql,
             title: "Sql",
+            stars: 4,
+        },
+        {
+            year:"2021",
+            src:java,
+            title: "Java",
             stars: 3,
         },
-
-
+        {
+            year:"2021",
+            src:git,
+            title: "Git",
+            stars: 3,
+        },
+        {
+            year:"2021",
+            src:python,
+            title: "python",
+            stars: 3,
+        },
     ]
     const classes = useStyles();
     return (
@@ -101,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
     },
     card:{
         width: "70vh",
-        height:"70vh",
+        height:"86vh",
         display: "flex",
         margin:"auto",
         marginTop: theme.spacing(4),

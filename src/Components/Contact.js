@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "& h3:hover":{
             cursor: "pointer",
-            color: "slateBlue",
+            color: "black",
             textDecoration: "none",
         },
     }, 
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#25DFE8",
         padding: theme.spacing(1.5),
         "&:hover":{
-            backgroundColor: "slateBlue",
+            backgroundColor: "black",
         },
         "&":{
             color: "#fff",

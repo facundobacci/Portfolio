@@ -14,14 +14,13 @@ function App() {
       <About title = "Sobre mi" id = "about"/>
       <Skills title = "Habilidades" id= "skills"/>
       <MyWork title = "Mis trabajos" id= "mywork"/>
-      <Contact title = "Contacto" id= "contact"/>
     </div>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
 root:{
-  background:'linear-gradient(to right bottom, #a6ffff, #8ea8b9)'
+  background: 'beige'
   
 },
 

@@ -3,7 +3,7 @@ import { makeStyles, Typography, Button } from '@material-ui/core';
 import React from 'react'
 import foto from '../Images/Facu.jpg'
 import TypeWriterEffect from 'react-typewriter-effect';
-import cv from '../Images/CV-FACUNDO BACCI.pdf'
+import cv from '../Images/CV-Facundo-Bacci.pdf'
 
 const About = ({id,title}) => {
     const classes = useStyles();
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "& h3:hover":{
             cursor: "pointer",
-            color: "slateBlue",
+            color: "black",
             textDecoration: "none",
         },
     },   
@@ -104,10 +104,9 @@ const useStyles = makeStyles((theme) => ({
             bottom: "2rem",
             right:"1rem",
         },
-        backgroundColor: "#25DFE8",
+        backgroundColor: "green",
         padding: theme.spacing(3),
         "&:hover":{
-            backgroundColor: "slateBlue",
         },
         "& a ":{
             color: "#fff",

@@ -34,11 +34,11 @@ const Navbar = () => {
             text: "Mi experiencia",
             icon: <AndroidIcon fontSize = "large" className={classes.color}/>
         },
-        {
-            id: "contact",
-            text: "Contacto",
-            icon: <AlternateEmailIcon fontSize = "large" className={classes.color}/>
-        }
+        // {
+        //     id: "contact",
+        //     text: "Contacto",
+        //     icon: <AlternateEmailIcon fontSize = "large" className={classes.color}/>
+        // }
     ]
 
     const scrollToTop = () => {
@@ -49,11 +49,11 @@ const Navbar = () => {
         <>
         <AppBar position = "sticky" className = {classes.root2}>
            <Toolbar className = {classes.toolbar}>
-                <img src= {logo}
+                {/* <img src= {logo}
                  className = {classes.logo}
                   alt = "Logo"
                   onClick={scrollToTop}
-                  />
+                  /> */}
                 <List className = {classes.menu}>
                     {
                         links.map(({id,text},index)=>(
@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "& a:hover":{
             cursor: "pointer",
-            color: "slateBlue",
+            color: "black",
         }, 
     },
     menuButton: {
@@ -169,14 +169,14 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "1.3rem",
         },
         "& h5:hover": {
-            color:"slateBlue",
+            color:"black",
             cursor:"pointer",
         }
         
 
     },
     cancelicon:{
-        color: "slateBlue",
+        color: "black",
         position: "absolute",
         top: 0,
         right: 10,
